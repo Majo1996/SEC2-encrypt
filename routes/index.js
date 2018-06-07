@@ -5,8 +5,7 @@ var main = require('../public/javascripts/main.js');
 /* GET home page. */
 router.get('/', main.index)
 
-router.post('/', main.post)
+router.post('/', main.post.bind(main))
 
-router.get('/:name', main.get)
 module.exports = router;
 
